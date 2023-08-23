@@ -1,0 +1,29 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table venues {
+  id integer
+  name string
+  address string
+  squareFootage integer
+  maximumOccupancy integer
+}
+
+Table bands {
+  id integer
+  name string
+  bandSize integer
+  genre string
+  yearFounded integer
+}
+
+Table bookings {
+  bandId integer
+  venueId integer
+  date integer
+  time integer
+}
+
+Ref: "bookings"."bandId" < "bands"."id"
+
+Ref: "bookings"."venueId" < "venues"."id"

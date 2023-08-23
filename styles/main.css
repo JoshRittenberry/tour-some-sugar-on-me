@@ -1,0 +1,75 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.bookings {
+    max-width: 1800px;
+    margin: auto;
+}
+ 
+.bookings__list ul{
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.bookings__list li {
+    margin: 10px;
+    text-align: center;
+}
+
+.vb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.venues {
+    max-width: 600px;
+}
+
+.venue__item {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.venue__text {
+    background-color: black;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.venue__image {
+    max-width: 400px;
+    margin: auto;
+}
+
+.bands {
+    max-width: 1200px;
+}
+
+.bands__list ul {
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.band__item div {
+    text-align: center;
+}
+
+.band__image {
+    max-width: 200px;
+}
