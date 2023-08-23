@@ -1,6 +1,7 @@
+import { bookingsList } from "./bookings.js"
 import { bandsList } from "./bands.js"
 import { venuesList } from "./venues.js"
-import { bookingsList } from "./bookings.js"
+
 
 const bookingsContainer = document.querySelector(".bookings__list")
 const bookingsHTML = bookingsList()

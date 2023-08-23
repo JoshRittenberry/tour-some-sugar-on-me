@@ -5,23 +5,24 @@ Table venues {
   id integer
   name string
   address string
-  squareFootage integer
+  size integer
   maximumOccupancy integer
+  image url
 }
 
 Table bands {
   id integer
   name string
-  bandSize integer
+  members integer
   genre string
   yearFounded integer
+  image url
 }
 
 Table bookings {
   bandId integer
   venueId integer
   date integer
-  time integer
 }
 
 Ref: "bookings"."bandId" < "bands"."id"

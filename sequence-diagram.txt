@@ -1,0 +1,61 @@
+title Tour Some Sugar On Me
+
+main.js->index.html:(6 main.js) Uses a querySelector to find the bookings__list class
+
+main.js<--index.html: (6 main.js) Returns the HTML string, with the bookings__list class, and sets it to the variable bookingsContainer
+
+main.js->bookings.js:(7 main.js) Inovkes the bookingsList() function
+
+loop
+note left of bookings.js:(57 bookings.js) for...of loop is started to iterate through the array of bookings
+
+note right of bookings.js:(57 bookings.js) It iterates through an array called bookingsOrdered this array is created by an earlier function that orders the bookings by their date in ascending order
+
+***************************
+
+loop
+note left of bookings.js:(62-67 bookings.js) for...of loop is started to iterate through the array of bands to find the band with an id that matches the booking's bandId - then sets the band'ss information to variables defined in the function for later use
+end 
+
+***************************
+
+loop 
+note left of bookings.js:(70-74 bookings.js) for...of loop is started to iterate through the array of venues to find the venue with an id that matches the booking's venueId - then sets the venue's information to variables defined in the function for later us
+end 
+
+note left of bookings.js:(76-81 bookings.js) A HTML string is created for each booking object
+
+end 
+
+main.js<--bookings.js:(7 main.js) Returns a HTML string that will display all of the bookings information on the webpage and sets it to the bookingsHTML variable
+
+main.js-->index.html:(8 main.js) Returns the HTML string stored in the bookingsHTML variable
+
+main.js->index.html:(10 main.js) Uses a querySelector to find the bands__list class
+
+main.js<--index.html:(10 main.js) Returns the HTML string, with the bands__list class, and sets it to the variable bandsContainer
+
+main.js->bands.js:(11 main.js) Inovkes the bandsList() function
+
+loop
+note left of bands.js:(43 bands.js) foor...of loop is started to iterate through the array of bands and create a HTML string for each band object
+
+end 
+
+main.js<--bands.js:(11 main.js) Returns a HTML string that will display all of the bands on the webpage and sets it to the bandsHTML variable
+
+main.js-->index.html:(12 main.js) Returns the HTML string stored in the bandsHTML variable
+
+main.js->index.html:(14 main.js) Uses a querySelector to find the venues__list class
+
+main.js<--index.html:(14 main.js) Returns the HTML string, with the venues__list class, and sets it to the variable venuesContainer
+
+main.js->venues.js:(15 main.js) Invokes the venuesList() function
+
+loop
+note left of venues.js:(40 venues.js) for...of loop is started to iterate through the array of venues and create a HTML string for each venue object
+end
+
+main.js<--venues.js:(15 main.js) Returns a HTML string that will display all of the venues on the webpage and sets it to the venuesHTML variable
+
+main.js-->index.html:(16 main.js) Returns the HTML string stored in the venuesHTML variable
