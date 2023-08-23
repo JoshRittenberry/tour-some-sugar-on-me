@@ -26,5 +26,4 @@ Table bookings {
 }
 
 Ref: "bookings"."bandId" < "bands"."id"
-
 Ref: "bookings"."venueId" < "venues"."id"

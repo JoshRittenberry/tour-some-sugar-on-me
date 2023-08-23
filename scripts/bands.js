@@ -1,8 +1,17 @@
-import { getBands, getBookings, getVenues } from "./database.js";
+import { getBands, getBookings, getVenues, getMembers } from "./database.js";
 
 const bands = getBands()
 const venues = getVenues()
 const bookings = getBookings()
+const members = getMembers()
+
+const memberInfo = (membersArray) => {
+    let info = ""
+    for (const member of membersArray) {
+        info += `${member.firstName} ${member.lastName} (${member.role})\n`
+    }
+    return info
+}
 
 document.addEventListener(
     "click",
@@ -11,6 +20,7 @@ document.addEventListener(
         const band = clickEvent.target
         let venueIds = []
         let venueNames = []
+        let membersList = []
         const separator = "\n"
 
         if (band.dataset.type === "band") {
@@ -28,10 +38,16 @@ document.addEventListener(
                 }
             }
 
+            for (const member of members) {
+                if (member.bandId == band.dataset.bandId) {
+                    membersList.push(member)
+                }
+            }
+
             if (venueNames.length > 0) {
-                window.alert(`${band.dataset.bandName} has booked the following venues:\n${venueNames.join(separator)}`)
+                window.alert(`Band Members:\n${memberInfo(membersList)}\n${band.dataset.bandName} has booked the following venues:\n${venueNames.join(separator)}`)
             } else {
-                window.alert(`${band.dataset.bandName} hasn't made a booking yet`)
+                window.alert(`Performer:\n${memberInfo(membersList)}\n${band.dataset.bandName} hasn't made a booking yet`)
             }
         }
     }
