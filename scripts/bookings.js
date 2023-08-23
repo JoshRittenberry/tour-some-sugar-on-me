@@ -29,9 +29,29 @@ const formatDate = (date) => {
     return formattedDate
 }
 
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+
+        const booking = clickEvent.target
+        let bandInfo = {}
+
+        if (booking.dataset.type === "booking") {
+            for (const band of bands) {
+                if (band.id == booking.dataset.bandId) {
+                    bandInfo = band
+                }
+            }
+
+            window.alert(`${bandInfo.name}\n${bandInfo.genre}\nFormed in ${bandInfo.yearFounded}\n${bandInfo.members} band members`)
+        }
+    }
+)
+
 export const bookingsList = () => {
     let html = "<ul>"
     let bandObject = ""
+    let bandId = ""
     let venueObject = ""
 
     for (const booking of bookingsOrdered) {
@@ -42,6 +62,7 @@ export const bookingsList = () => {
         for (const band of bands) {
             if (band.id === booking.bandId) {
                 bandObject = band.name
+                bandId = band.id
             }
         }
 
@@ -54,7 +75,7 @@ export const bookingsList = () => {
 
         html +=
         `
-        <li class="booking_item" data-type="booking">${bandObject} are playing at ${venueObject} on ${date}</li>
+        <li class="booking_item" data-type="booking" data-band-id="${bandId}">${bandObject} are playing at ${venueObject} on ${date}</li>
         `
 
     }
