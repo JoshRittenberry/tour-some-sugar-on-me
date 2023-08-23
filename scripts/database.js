@@ -49,7 +49,7 @@ const database = {
         },
         {
             id: 7,
-            name: "Creedence Clearwater Revival (CCR)",
+            name: "Creedence Clearwater Revival",
             members: 4,
             genre: "rock",
             yearFounded: 1967,

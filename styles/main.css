@@ -32,6 +32,12 @@ h1, h2 {
 
 .venues {
     max-width: 600px;
+    margin: 20px;
+}
+
+.venues__list ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .venue__item {
@@ -56,12 +62,13 @@ h1, h2 {
 
 .bands {
     max-width: 1200px;
+    margin: 20px;
 }
 
 .bands__list ul {
-    columns: 4;
-    -webkit-columns: 4;
-    -moz-columns: 4;
+    columns: 5;
+    -webkit-columns: 5;
+    -moz-columns: 5;
     list-style-type: none;
     padding-left: 0;
 }
